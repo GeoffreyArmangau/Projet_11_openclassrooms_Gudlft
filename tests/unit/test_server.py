@@ -54,3 +54,10 @@ def test_cannot_book_past_competition(client):
         'places': '1'
     })
     assert b'You cannot book a past competition' in response.data
+
+def test_public_points_board(client):
+    response = client.get('/pointsDisplay')
+    assert response.status_code == 200
+    assert b'Simply Lift' in response.data
+    assert b'Iron Temple' in response.data
+    assert b'She Lifts' in response.data
