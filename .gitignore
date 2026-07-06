@@ -1,9 +1,0 @@
-bin
-include
-lib
-.Python
-.envrc
-__pycache__
-.DS_store
-.gitignore
-roadmap.md
